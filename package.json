@@ -1,0 +1,18 @@
+{
+  "name": "bcde213-iteration-2-prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass sass/styles.scss css/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "sass": "^1.99.0"
+  }
+}
