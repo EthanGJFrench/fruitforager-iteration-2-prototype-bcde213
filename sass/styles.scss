@@ -1,7 +1,15 @@
-// Override variables BEFORE importing Bootstrap
-$border-radius: 1rem; 
+// Layout, spacing, size
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: space-between;
+}
 
-// Make carousel items the same size
+a img {
+    max-width: 80px;
+}
+
 #home-page-carousel .carousel-item {
   aspect-ratio: 16 / 9;
 }
@@ -10,5 +18,7 @@ $border-radius: 1rem;
   height: 100%;
   object-fit: cover;
 }
+
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";

@@ -7,10 +7,10 @@
     <title>Home page | FruitForager</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-md">
         <div class="container-fluid">
             <!-- Brand -->
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="">
                 <img src="/assets/svgs/apple-svgrepo-com.svg" alt="FruitForager logo"> <!-- Temp Logo -->
                 Fruit Forager
             </a>            
@@ -35,22 +35,22 @@
         </div>
     </nav>
 
-    <p>FruitForager is an interactive map-based app that helps you descover pubically available fruit trees in Christchurch, making it easy to find fresh, free produce in the Garden City. FruitForager encourages people to make use of nature's bounty by connecting local communities with underused food sources.</p> 
-
-    <a href="/pages/map.html">
-        <section class="d-flex align-items-center gap-4">
+    <p class="container">FruitForager is an interactive map-based app that helps you descover pubically available fruit trees in Christchurch, making it easy to find fresh, free produce in the Garden City. FruitForager encourages people to make use of nature's bounty by connecting local communities with underused food sources.</p> 
+    
+    <div class="container">
+        <a href="/pages/map.html " class="d-flex align-items-center justify-content-left gap-4">
             <img src="/assets/svgs/street-map-svgrepo-com.svg" alt="map">
             <p class="m-0">Try Me! Find fruit trees near you!</p>
-        </section>
-    </a>
+        </a>
+    </div>
 
     <div id="home-page-carousel" class="carousel slide carousel-fade">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/assets/images/pexels-andromeda99-35155442.webp" class="d-block w-100" alt="">
+                <img src="/assets/images/pexels-andromeda99-35155442.webp" class="d-block w-100" alt="temp image"> <!-- temp image -->
             </div>
             <div class="carousel-item">
-                <img src="/assets/images/pexels-prose4ever-5363175.webp" class="d-block w-100" alt="">
+                <img src="/assets/images/pexels-prose4ever-5363175.webp" class="d-block w-100" alt="temp image"> <!-- temp image -->
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#home-page-carousel" data-bs-slide="prev">
@@ -63,9 +63,12 @@
         </button>
     </div>
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tutorialVideoModal">
-        Launch demo modal
-    </button>
+    <div class="container-fluid">
+        <a href="/pages/map.html" data-bs-toggle="modal" data-bs-target="#tutorialVideoModal" class="d-flex align-items-center justify-content-left gap-4">
+            <img src="/assets/svgs/play-circle-svgrepo-com.svg" alt="play video">
+            <p class="m-0">Tutorial Video!</p>
+        </a>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="tutorialVideoModal" tabindex="-1" aria-labelledby="tutorialVideoModal" aria-hidden="true">
@@ -84,9 +87,9 @@
         </div>
     </div>
 
-    <!-- <video width="240" controls>
-        <source src="/assets/Video/8745407-hd_2048_1080_30fps.mp4">
-    </video> -->
+    <footer>
+        Created by ethan french
+    </footer>
 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
