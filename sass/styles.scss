@@ -103,14 +103,14 @@ a img {
   max-width: 50px;
 }
 
-/* Hero section */
+/* Homepage hero section */
 #homepage-hero {
     position: relative;
     height: calc(100vh - 56px);
     overflow: hidden;
 }
 
-#homepage-hero .carousel-wrapper {
+#homepage-hero .ff-carousel-wrapper { // Created with the assistance of ChatGPT using the prompt "Industry standard way to identify and separate bootstrap classes from my own custom classes".
     position: relative;
     height: 100%;
 }
@@ -126,7 +126,7 @@ a img {
     filter: brightness(0.3);
 }
 
-.hero-overlay {
+.ff-hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -136,9 +136,7 @@ a img {
     align-items: center;
     z-index: 2;
 
-    /* fade animation */
     animation: heroFadeIn 2s ease-out forwards;
-    /* start hidden */
     opacity: 0;
 }
 
@@ -154,7 +152,7 @@ a img {
     }
 }
 
-.hero-overlay .container {
+.ff-hero-overlay .container {
     color: white;
 }
 
