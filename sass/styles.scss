@@ -94,6 +94,10 @@ $theme-colors: (
 $link-color: $dark;
 $body-color: $dark;
 
+.nav-link.active {
+    background-color: $secondary;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -101,6 +105,10 @@ body {
 
 a img {
   max-width: 50px;
+}
+
+.container, .container-fluid {
+    max-width: 40rem;
 }
 
 /* Homepage hero section */
@@ -145,7 +153,6 @@ a img {
         opacity: 0;
         transform: translateY(15px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -154,6 +161,20 @@ a img {
 
 .ff-hero-overlay .container {
     color: white;
+}
+
+.ff-glow-section {
+    background:
+        radial-gradient(
+            circle at top left,
+            $primary,
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at top right,
+            $secondary,
+            transparent 20%
+        ), 
 }
 
 // Bootstrap import LAST

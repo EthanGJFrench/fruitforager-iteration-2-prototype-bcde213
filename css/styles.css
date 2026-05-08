@@ -67,6 +67,10 @@ table {
   font-weight: normal;
   font-display: swap;
 }
+.nav-link.active {
+  background-color: #67e8f9;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -74,6 +78,10 @@ body {
 
 a img {
   max-width: 50px;
+}
+
+.container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+  max-width: 40rem;
 }
 
 /* Homepage hero section */
@@ -124,6 +132,10 @@ a img {
 }
 .ff-hero-overlay .container {
   color: white;
+}
+
+.ff-glow-section {
+  background: radial-gradient(circle at top left, #a5dc45, transparent 20%), radial-gradient(circle at top right, #67e8f9, transparent 20%);
 }
 
 /*!
