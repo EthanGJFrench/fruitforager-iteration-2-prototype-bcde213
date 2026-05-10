@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*  
+
+*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -67,10 +70,6 @@ table {
   font-weight: normal;
   font-display: swap;
 }
-.nav-link.active {
-  background-color: #67e8f9;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -80,8 +79,13 @@ a img {
   max-width: 50px;
 }
 
-.container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
-  max-width: 40rem;
+.ff-active-link img {
+  width: 25px;
+}
+
+.active img {
+  width: 30px;
+  height: auto;
 }
 
 /* Homepage hero section */
@@ -120,6 +124,10 @@ a img {
   opacity: 0;
 }
 
+.ff-hero-overlay div.container {
+  height: 100%;
+}
+
 @keyframes heroFadeIn {
   from {
     opacity: 0;
@@ -130,7 +138,7 @@ a img {
     transform: translateY(0);
   }
 }
-.ff-hero-overlay .container {
+.ff-hero-overlay {
   color: white;
 }
 

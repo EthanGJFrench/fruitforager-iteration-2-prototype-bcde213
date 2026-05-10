@@ -1,3 +1,7 @@
+/*  
+
+*/  
+
 // CSS reset
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -94,10 +98,6 @@ $theme-colors: (
 $link-color: $dark;
 $body-color: $dark;
 
-.nav-link.active {
-    background-color: $secondary;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -107,8 +107,13 @@ a img {
   max-width: 50px;
 }
 
-.container, .container-fluid {
-    max-width: 40rem;
+.ff-active-link img {
+    width: 25px;
+}
+
+.active img {
+    width: 30px;
+    height: auto;
 }
 
 /* Homepage hero section */
@@ -118,7 +123,7 @@ a img {
     overflow: hidden;
 }
 
-#homepage-hero .ff-carousel-wrapper { // Created with the assistance of ChatGPT using the prompt "Industry standard way to identify and separate bootstrap classes from my own custom classes".
+#homepage-hero .ff-carousel-wrapper { // Created with the assistance of ChatGPT using the prompt "Industry standard ways to identify and separate bootstrap classes from my own custom classes".
     position: relative;
     height: 100%;
 }
@@ -148,6 +153,10 @@ a img {
     opacity: 0;
 }
 
+.ff-hero-overlay div.container {
+    height: 100%;
+}
+
 @keyframes heroFadeIn {
     from {
         opacity: 0;
@@ -159,7 +168,7 @@ a img {
     }
 }
 
-.ff-hero-overlay .container {
+.ff-hero-overlay {
     color: white;
 }
 
@@ -174,8 +183,8 @@ a img {
             circle at top right,
             $secondary,
             transparent 20%
-        ), 
+        ),
 }
 
-// Bootstrap import LAST
+// Bootstrap - make sure to import last 
 @import "../node_modules/bootstrap/scss/bootstrap";

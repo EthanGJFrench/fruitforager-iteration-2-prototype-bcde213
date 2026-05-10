@@ -7,26 +7,26 @@
     <title>Home page | FruitForager</title>
 </head>
 <body class="text-dark">
-
     <!-- Navigation bar -->
-    <nav class="navbar-expand-md p-0 navbar border-1 border-bottom border-dark bg-primary bg-gradient">
-        <div class="container-fluid bg-gradient p-0">
+    <nav class="navbar-expand-md p-0 navbar border-1 border-bottom border-dark">
+        <div class="container bg-gradient">
             <a class="navbar-brand ms-2" href="home.html">
                 <img src="/assets/svgs/apple-svgrepo-com.svg" alt="FruitForager logo"> <!-- Temp Logo -->
             </a>
-            <button class="navbar-toggler bg-secondary me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler bg-primary bg-gradient" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active bg-gradient px-2 py-3" href="/pages/home.html">Home</a>
+                    <li class="nav-item d-flex ff-active ff-active-link">
+                        <a class="nav-link active px-2 py-3" href="/pages/home.html">Home</a>
+                        <img src="../assets/svgs/pointer-hands-and-gestures-svgrepo-com.svg" alt="">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link bg-gradient px-2 py-3" href="/pages/map.html">Interactive Map</a>
+                        <a class="nav-link px-2 py-3" href="/pages/map.html">Interactive Map</a>
                     </li>
                     <li class="nav-item" data-bs-toggle="modal" data-bs-target="#tutorialVideoModal">
-                        <a class="nav-link bg-gradient px-2 py-3">Tutorial Video</a>
+                        <a class="nav-link px-2 py-3">Tutorial Video</a>
                     </li>
                 </ul>
             </div>
@@ -48,42 +48,44 @@
                 </div>
             </div>
             <!-- Text overlay -->
-            <section class="d-flex flex-column justify-content-evenly ff-hero-overlay">
-                <div class="container">
-                    <h1 class="mb-5">Welcome to FruitForager</h1>
-                    <p>FruitForager is an interactive map-based app that helps you discover publicly available fruit trees in Christchurch,making it easy to find fresh, free produce in the Garden City.</p>
-                </div>
-                <section class="container">
-                    <a href="/pages/map.html" class="d-flex align-items-center justify-content-left gap-4 p-2 bg-secondary bg-gradient rounded-3">
-                        <img src="/assets/svgs/street-map-svgrepo-com.svg" alt="map">
-                        <span>Try Me! Find fruit trees near you!</span>
+            <section class="ff-hero-overlay">
+                <div class="container d-flex flex-column justify-content-evenly">
+                    <div>
+                        <h1 class="mb-3">Welcome to FruitForager</h1>
+                        <p>FruitForager is an interactive map-based app that helps you discover publicly available fruit trees in Christchurch, and makes it easy to find fresh and free produce!</p>
+                    </div>
+                    <a href="/pages/map.html">
+                        <button type="button" class="w-100 btn btn-primary bg-gradient py-3">
+                            <h2 class="m-0">Map</h2>
+                        </button>
                     </a>
-                </section>
+                </div>
             </section>
         </div>
     </section>
-
-    <section class="ff-glow-section py-5">
-        <section class="container">
-            <a href="/pages/map.html" class="d-flex align-items-center justify-content-left gap-4 p-2 bg-secondary rounded-3" data-bs-toggle="modal" data-bs-target="#tutorialVideoModal">
-                <img src="/assets/svgs/play-circle-svgrepo-com.svg" alt="play video">
-                <span class="m-0">Need Help? Watch the tutorial video!</span>
-            </a>
-        </section>  
-    </section>
-    <!-- Link section -->
-
-    <footer>
-        Created by ethan french
-    </footer>
+    
+    <div class="ff-glow-section container">
+        <section>
+            <h2 class="mb-3">Need help getting started?</h2>
+            <p></p>
+        </section>
+        <a href="/pages/map.html" data-bs-toggle="modal" data-bs-target="#tutorialVideoModal">
+            <button type="button" class="w-100 btn btn-primary bg-gradient py-3">
+                <h2 class="m-0">Video Tutorial</h2>
+            </button>
+        </a>
+        <footer>
+            <p>Created by Ethan French</p> <!-- Licensing Information goes here -->
+        </footer>
+    </div>
 
     <!-- Tutorial video modal -->
-    <section class="modal fade" id="tutorialVideoModal" tabindex="-1" aria-labelledby="tutorialVideoModal" aria-hidden="true">
+    <section class="modal fade bg-gradient" id="tutorialVideoModal" tabindex="-1" aria-labelledby="tutorialVideoModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
+            <div class="modal-content bg-primary bg-gradient">
+                <div class="modal-header border-0">
                     <h1>Video Tutorial</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close border-0" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <video class="w-100" controls>
