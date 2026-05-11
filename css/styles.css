@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /*  
-
+    Fruit Forager Prototype Iteration 2 SCSS file
+    Ethan French
+    V1.0
 */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -62,14 +64,13 @@ table {
   font-family: "Raleway";
   src: url("../assets/fonts/Raleway/static/Raleway-Regular.ttf") format(truetype);
   font-weight: normal;
-  font-display: swap;
 }
 @font-face {
   font-family: "Krub";
   src: url("../assets/fonts/Krub/Krub-Regular.ttf") format(truetype);
   font-weight: normal;
-  font-display: swap;
 }
+/* Layout & custom SASS */
 body {
   display: flex;
   flex-direction: column;
@@ -79,13 +80,21 @@ a img {
   max-width: 50px;
 }
 
-.ff-active-link img {
-  width: 25px;
+.ff-icon {
+  width: 35px;
+  height: auto;
 }
 
-.active img {
-  width: 30px;
-  height: auto;
+.ff-active-pointer {
+  -webkit-transform: scale(-1, -1);
+  -moz-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+  transform: scale(1, -1);
+  rotate: 90deg;
+}
+
+.ff-active-pointer path {
+  fill: #a5dc45;
 }
 
 /* Homepage hero section */
@@ -143,7 +152,11 @@ a img {
 }
 
 .ff-glow-section {
-  background: radial-gradient(circle at top left, #a5dc45, transparent 20%), radial-gradient(circle at top right, #67e8f9, transparent 20%);
+  background: radial-gradient(circle at top left, #a5dc45, transparent 30%), radial-gradient(circle at top right, #67e8f9, transparent 30%);
+}
+
+.ff-glow-section div.container {
+  height: 100vh;
 }
 
 /*!

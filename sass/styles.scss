@@ -1,6 +1,8 @@
 /*  
-
-*/  
+    Fruit Forager Prototype Iteration 2 SCSS file
+    Ethan French
+    V1.0
+*/
 
 // CSS reset
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -56,25 +58,21 @@ table {
   font-family: "Raleway";
   src: url("../assets/fonts/Raleway/static/Raleway-Regular.ttf") format(truetype);
   font-weight: normal;
-  font-display: swap;
 }
 
 @font-face {
   font-family: "Krub";
   src: url("../assets/fonts/Krub/Krub-Regular.ttf") format(truetype);
   font-weight: normal;
-  font-display: swap;
 }
 
 $nav-link-font-weight: 700;
-
 $font-body: "Krub", sans-serif;
 $font-heading: "Raleway", sans-serif;
-
 $font-family-base: $font-body;
 $headings-font-family: $font-heading;
 
-// Colours
+// Colors
 $primary: #a5dc45;
 $secondary: #67e8f9;
 $success: #22c55e;
@@ -98,6 +96,7 @@ $theme-colors: (
 $link-color: $dark;
 $body-color: $dark;
 
+/* Layout & custom SASS */
 body {
   display: flex;
   flex-direction: column;
@@ -107,13 +106,22 @@ a img {
   max-width: 50px;
 }
 
-.ff-active-link img {
-    width: 25px;
+.ff-icon {
+    width: 35px;
+    height: auto;
 }
 
-.active img {
-    width: 30px;
-    height: auto;
+.ff-active-pointer {
+    -webkit-transform: scale(-1, -1);
+    -moz-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1);
+    transform: scale(1, -1);
+    rotate: calc(90deg);
+}
+
+
+.ff-active-pointer path {
+    fill: $primary;
 }
 
 /* Homepage hero section */
@@ -123,7 +131,7 @@ a img {
     overflow: hidden;
 }
 
-#homepage-hero .ff-carousel-wrapper { // Created with the assistance of ChatGPT using the prompt "Industry standard ways to identify and separate bootstrap classes from my own custom classes".
+#homepage-hero .ff-carousel-wrapper { 
     position: relative;
     height: 100%;
 }
@@ -177,14 +185,18 @@ a img {
         radial-gradient(
             circle at top left,
             $primary,
-            transparent 20%
+            transparent 30%
         ),
         radial-gradient(
             circle at top right,
             $secondary,
-            transparent 20%
-        ),
+            transparent 30%
+        );
 }
 
-// Bootstrap - make sure to import last 
+.ff-glow-section div.container {
+    height: 100vh;
+}
+
+// Bootstrap - make sure to import last. Need to modularise imports
 @import "../node_modules/bootstrap/scss/bootstrap";
