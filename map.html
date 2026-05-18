@@ -3,16 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <!-- <script src="assets/leaflet/dist/leaflet.js"></script>
-    <link rel="stylesheet" href="assets/leaflet/dist/leaflet.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <title>Interactive Map</title>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <title>Interactive Map | FruitForager</title>
 </head>
 <body>
-     <div id="map"></div>
+    <!-- Navigation bar -->
+    <section class="navbar-expand-md p-0 navbar border-1 border-bottom border-dark">
+        <div class="container bg-gradient">
+            <a class="navbar-brand ms-2 d-flex align-items-center" href="./index.html">
+                <img src="assets/svgs/apple-svgrepo-com.svg" alt="FruitForager logo"> <!-- Temp Logo -->
+                <h1 class="m-0">FruitForager</h1>
+            </a>
+            <button class="navbar-toggler bg-primary bg-gradient" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item d-flex">
+                        <a class="nav-link px-2 py-3" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-2 py-3" href="map.html">Interactive Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2 py-3" data-bs-toggle="modal" data-bs-target="#tutorialVideoModal">Tutorial Video</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div id="map"></div>
 
      <script src="scripts/map.js"></script>
+     <!-- Bootstrap import -->
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script> <!-- This is required because git repo ignore node modules -->
 </body>
 </html>
