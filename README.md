@@ -2,6 +2,10 @@
 # FruitForager Prototype Iteration 2
 **This project is the second iteritive prototype for the FruitForager interactive webmap application for BCDE213 Assessmnet#2.**
 
+## Coding conventions used.
+### html class prefixes
+An html class with a prefix of `ff-` represents a custon class.   
+
 ### Current issues with project
 **This section outlines design and technical aspects of this iteration that are flawed or incomplete that need to be addressed in the next iteration**
 - Improve the applicaiton branding and visual design.
