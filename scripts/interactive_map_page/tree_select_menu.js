@@ -4,7 +4,8 @@
  * @author: Ethan French
  * @version: 1.0
  */
-export class TreeSelectMenu {
+export class TreeSelectMenu { 
+    
     /**
      * Initalises the tree select menu.
      * 

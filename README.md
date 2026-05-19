@@ -7,7 +7,7 @@
 An html class with a prefix of `ff-` represents a custon class.   
 
 ### Current issues with project
-**This section outlines design and technical aspects of this iteration that are flawed or incomplete that need to be addressed in the next iteration**
+**This section outlines design and technical aspects of this iteration that are flawed or incomplete and should be addressed in the next iteration**
 - Improve the applicaiton branding and visual design.
     - Needs a real logo.
     - Needs a better map design - current iteration uses default leaflet assets.
@@ -16,6 +16,7 @@ An html class with a prefix of `ff-` represents a custon class.
 - Current iteration is only styled mobile devices - not yet responsive.
 - Need to add copyright information in the home-page footer. 
 - The map tree select checkbox options are very small - it needs to be larger.
+- The small nav menu doesn't close when user clicks outside of it.
 
 # AI Disclosure:
 **This section discloses where AI has been used in the project and what the prompt was:** 

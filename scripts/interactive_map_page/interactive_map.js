@@ -1,17 +1,19 @@
 import { TreeSelectMenu } from "./tree_select_menu.js";
-/** 
+
+/**
  * Handles the Interactive Map functionality.
  * 
  * @author: Ethan French
  * @version: 1.0
  */
 export default class InteractiveMap {
+    
     /**
      * Initalises the InteractiveMap co.
      * 
      * Retrives the selectAllTrees checkbox DOM element.
      * Retrives all of the fruitOption checkbox DOM elements.
-     * Adds toggleSelectAll() eventListenter to selectAllTrees checkbox DOM element. 
+     * Adds toggleSelectAll() eventListenter to selectAllTrees checkbox DOM element.
      */
     constructor() {
         // Init page elements

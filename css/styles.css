@@ -1,12 +1,13 @@
 @charset "UTF-8";
 /*  
-    Fruit Forager Prototype Iteration 2 SCSS file
-    Ethan French
-    V1.0
+    FruitForager prototype iteration 2 styling
+    @author: Ethan French
+    @version: 1.0
 */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* 
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
 h1,
@@ -60,6 +61,11 @@ table {
   border-spacing: 0;
 }
 
+/*
+================
+End of CSS reset
+================
+*/
 @font-face {
   font-family: "Raleway";
   src: url("../assets/fonts/Raleway/static/Raleway-Regular.ttf") format(truetype);
