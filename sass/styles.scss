@@ -191,5 +191,9 @@ a img {
     width: 100%;
 }
 
+.form-check {
+    font-size: 1.2rem;
+}
+
 // Bootstrap - make sure to import last. Need to modularise imports
 @import "../node_modules/bootstrap/scss/bootstrap";
