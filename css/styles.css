@@ -117,7 +117,7 @@ a img {
   display: flex;
   align-items: center;
   z-index: 2;
-  animation: heroFadeIn 0.8s ease-out forwards;
+  animation: heroFadeIn 1.2s ease-out forwards;
   opacity: 0;
 }
 
@@ -152,7 +152,13 @@ a img {
   width: 100%;
 }
 
+.dropdown-menu {
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
 .form-check {
+  padding: 0.25rem;
   font-size: 1.2rem;
 }
 
