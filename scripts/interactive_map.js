@@ -1,17 +1,15 @@
-export default class InteractiveMap {
-    /**
-     * 
-     */
-    constructor() {
-        // Init map
-        this.map = L.map('map', { zoomControl: false }).setView([-43.532, 172.636], 12);
+import { TreeSelectMenu } from "./tree_select_menu.js";
 
-        // Add zoom controls to bottom right of page
+export default class InteractiveMap {
+    constructor() {
+        // Init page elements
+        this.map = L.map('map', { zoomControl: false }).setView([-43.532, 172.636], 12);
+        this.treeSelect = new TreeSelectMenu();
+        
+        // Set up Leaflet map features
         L.control.zoom({
             position: 'bottomright'
         }).addTo(this.map);
-
-        // Add OpenStreetMap tile
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 15,
             minZoom: 10,
