@@ -154,11 +154,11 @@ a img {
 
 .dropdown-menu {
   overflow-y: auto;
-  max-height: 70vh;
+  max-height: 50vh;
 }
 
 .form-check {
-  padding: 0.25rem;
+  padding: 0.5rem;
   font-size: 1.2rem;
 }
 

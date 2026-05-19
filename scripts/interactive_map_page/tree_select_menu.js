@@ -1,5 +1,5 @@
 /** 
- * Hanldes the fruit filter selection functionality.
+ * Handles the fruit filter selection functionality.
  * 
  * @author: Ethan French
  * @version: 1.0
