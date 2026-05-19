@@ -1,5 +1,10 @@
 import { TreeSelectMenu } from "./tree_select_menu.js";
-
+/** 
+ * Hanldes the Interactive Map functionality.
+ * 
+ * @author: Ethan French
+ * @version: 1.0
+ */
 export default class InteractiveMap {
     constructor() {
         // Init page elements

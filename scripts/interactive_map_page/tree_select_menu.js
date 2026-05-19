@@ -2,7 +2,7 @@
  * Hanldes the fruit filter selection functionality.
  * 
  * @author: Ethan French
- * @version: 1.0s
+ * @version: 1.0
  */
 export class TreeSelectMenu {
     /**
