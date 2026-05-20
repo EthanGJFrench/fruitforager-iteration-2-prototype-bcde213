@@ -13,8 +13,7 @@ An html class with a prefix of `ff-` represents a custon class.
     - Needs a better map design - current iteration uses default leaflet assets.
 - Modularise BStrap import by only importing components that have been implemented - current iteration imports the whole BStrap file.
 - SCSS is disorginised and needs to be refined/ modularised.
-- Current iteration is only styled mobile devices - not yet responsive.
-- Need to add copyright information in the home-page footer. 
+- Current iteration is only styled for mobile devices. The app is not yet responsive.
 - The map tree select checkbox options are very small - it needs to be larger.
 - The small nav menu doesn't close when user clicks outside of it.
 
