@@ -91,6 +91,10 @@ a img {
   height: auto;
 }
 
+.navbar-brand {
+  margin: 0;
+}
+
 /* Homepage hero section */
 #homepage-hero {
   position: relative;

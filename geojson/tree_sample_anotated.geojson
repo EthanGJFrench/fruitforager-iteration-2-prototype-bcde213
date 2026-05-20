@@ -1,0 +1,45 @@
+{
+"type": "FeatureCollection",
+"name": "Tree",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+    { "type": "Feature", 
+    "properties": { 
+        "TreeID": 1, 
+        "ServiceStatus": "Current", 
+        "Ownership": "Private", // Important! need to select only 
+        "LocationCertainty": "Approximate XY", 
+        "AgeClass": "Mature", 
+        "Protection": "Subdivision", 
+        "TargetFrequency": "Perpetual Use", 
+        "IDSRevisionNumber": null, 
+        "Species": "Eucalyptus globulus (Maiden's Gum)", 
+        "Genus": "Eucalyptus", 
+        "IsHybrid": "No", 
+        "IsRare": "No", 
+        "CommonName": "Maiden's Gum", 
+        "BotanicName": "globulus", 
+        "Variety": null, 
+        "Cultivar": null, 
+        "SubSpecies": null, 
+        "AccessionNumber": null, 
+        "PlantedDate": null, 
+        "ObservationDate": 
+        "2000-06-21T12:00:00Z", 
+        "DiameterAtBreastHeight": 1.1, 
+        "Height": 18.0, 
+        "CrownSpread": 12.0, 
+        "AssetLongDescription": null, 
+        "Comment": null, 
+        "SiteName": null, 
+        "Photo": "<table><tr><td></td></tr></table>", 
+        "SAPInternalReference": "IE000000000011209303", 
+        "IDSCATID": null, 
+        "ContractorExternalReference": null, 
+        "CreateDate": null, 
+        "LastEditDate": "2023-02-16T22:47:26Z" }, 
+        "geometry": { // Required for placing market on map.
+            "type": "Point", 
+            "coordinates": [ 172.570298970250491, -43.598559320163552 ] } }
+]
+}

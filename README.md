@@ -4,9 +4,9 @@
 
 ## Coding conventions used.
 ### html class prefixes
-An html class with a prefix of `ff-` represents a custon class.   
+An html class with a prefix of `ff-` represents a custon class. `ff-` classes are placed in the end of the `class` attribute after other classes - such as Bootstrap and Leaflet classes.    
 
-### Current issues with project
+## Current issues with project
 **This section outlines design and technical aspects of this iteration that are flawed or incomplete and should be addressed in the next iteration**
 - Improve the applicaiton branding and visual design.
     - Needs a real logo.
@@ -14,10 +14,62 @@ An html class with a prefix of `ff-` represents a custon class.
 - Modularise BStrap import by only importing components that have been implemented - current iteration imports the whole BStrap file.
 - SCSS is disorginised and needs to be refined/ modularised.
 - Current iteration is only styled for mobile devices. The app is not yet responsive.
-- The map tree select checkbox options are very small - it needs to be larger.
+- The filter tree element dropdown does not have an open or close animation - instance open and close.
 - The small nav menu doesn't close when user clicks outside of it.
+- Used mock/ fake tree geojson data.
 
-# AI Disclosure:
+## Use of mock data
+This prototype uses tree mock data. The mock data matches the same geojson feature structure as found in the original Christchurch City Council tree dataset. Using mock data during development allowed application features such as map rendering, filtering, popup generation.
+
+``` GeoJSON - Data analysis for mock data, with comments
+{
+"type": "FeatureCollection",
+"name": "Tree",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+    { "type": "Feature", 
+    "properties": { 
+        "TreeID": 1, 
+        "ServiceStatus": "Current", 
+        "Ownership": "Private", // Important - I only want to show publically available trees 
+        "LocationCertainty": "Approximate XY", 
+        "AgeClass": "Mature", 
+        "Protection": "Subdivision", 
+        "TargetFrequency": "Perpetual Use", 
+        "IDSRevisionNumber": null, 
+        "Species": "Eucalyptus globulus (Maiden's Gum)",
+        "Genus": "Eucalyptus", 
+        "IsHybrid": "No", 
+        "IsRare": "No", 
+        "CommonName": "Maiden's Gum", // Common name will the primary property used to determine the type of fruit tree. 
+        "BotanicName": "globulus",
+        "Variety": null, 
+        "Cultivar": null, 
+        "SubSpecies": null, 
+        "AccessionNumber": null, 
+        "PlantedDate": null, 
+        "ObservationDate": 
+        "2000-06-21T12:00:00Z", 
+        "DiameterAtBreastHeight": 1.1, 
+        "Height": 18.0, 
+        "CrownSpread": 12.0, 
+        "AssetLongDescription": null, 
+        "Comment": null, 
+        "SiteName": null, 
+        "Photo": "<table><tr><td></td></tr></table>", 
+        "SAPInternalReference": "IE000000000011209303", 
+        "IDSCATID": null, 
+        "ContractorExternalReference": null, 
+        "CreateDate": null, 
+        "LastEditDate": "2023-02-16T22:47:26Z" }, 
+        "geometry": { // Required for placing market on map.
+            "type": "Point", 
+            "coordinates": [ 172.570298970250491, -43.598559320163552 ] } }
+]
+}
+```
+
+## AI Disclosure:
 **This section discloses where AI has been used in the project and what the prompt was:** 
 - "ff-" naming convention was created with the assistance of ChatGPT using the prompt "Give me some industry-standard ways to seperate bootstrap classes from your own custom classes".
 - The TreeSelectMenu getFormData() method was created with the assistance of ChatGPT using the prompt "what are the best ways to retrieve data from HTML forms using JS?"

@@ -82,3 +82,11 @@ Used for:
 - Licence URL: https://www.pexels.com/license/
 Used for:
 - Tutorial video placeholder
+
+## Tree GeoJson
+- Source: https://opendata-christchurchcity.hub.arcgis.com/datasets/0c557c04453e435ba1e50389db0ede90_0/explore?filters=eyJDb21tb25OYW1lIjpbIkFsbW9uZCIsIkFwcGxlIiwiUGVhciIsIlN0cmF3YmVycnkgVHJlZSIsIldhbG51dCJdfQ%3D%3D&showTable=true
+- Author: Christchurch City Council
+- License: CC BY 4.0 License
+Used for:
+- Creating a new mock dataset of fruit trees based on the same geojson features to be used as mock data.
+**See the readme for a better overview as to how this tree database resource was used in this FruitForager Iteration 2 Prototype:**
