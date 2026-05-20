@@ -163,9 +163,22 @@ a img {
   max-height: 50vh;
 }
 
-.form-check {
+.ff-form-check {
   padding: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+}
+
+#treeFilterForm input {
+  border: 1px solid #000000;
+  margin-right: 1rem;
+}
+
+.dropdown-menu.show {
+  padding: 0;
+}
+
+.ff-submit-container {
+  box-shadow: 2px 2px 10px 2px #000000;
 }
 
 /*!

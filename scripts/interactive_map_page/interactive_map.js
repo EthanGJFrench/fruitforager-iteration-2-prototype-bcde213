@@ -16,7 +16,7 @@ export default class InteractiveMap {
      * Adds toggleSelectAll() eventListenter to selectAllTrees checkbox DOM element.
      */
     constructor() {
-        // Init page elements
+        // Init map page elements
         this.map = L.map('map', { zoomControl: false }).setView([-43.532, 172.636], 12);
         this.treeSelect = new TreeSelectMenu();
         
