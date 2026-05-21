@@ -36,11 +36,16 @@ export class TreeSelectMenu {
     /**
      * Gets select fruit filter values from the tree filter form.
      * 
-     * @returns {strings[]} An array containing the selected fruit values.
+     * @returns {strings[] if options have been select, else returns null} An array containing the selected fruit values.
      */
     getFormData() {
         const FORMDATA = new FormData(this.treeFilterForm)
         const SELECTEDFRUIT = FORMDATA.getAll("fruit")
-        return SELECTEDFRUIT
+        if (SELECTEDFRUIT.length > 0 && Array.isArray(SELECTEDFRUIT)) {
+            return SELECTEDFRUIT
+        }
+        else {
+            return null
+        }
     }
 }

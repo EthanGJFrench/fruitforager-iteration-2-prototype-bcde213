@@ -53,13 +53,11 @@ export default class InteractiveMap {
         const TREEFORMDATA = this.treeSelectMenu.getFormData()
         const TREEDATA = await this.getGeoJsonPromise()
 
-        TREEDATA.features.forEach(tree => {
-            this.addTreeToMap(tree)
-        })
+        console.log(TREEFORMDATA, TREEDATA)
     }
 
-    addTreeToMap(tree) {
-        const [lng, lat] = tree.geometry.coordinates;
-        L.marker([lat, lng]).addTo(this.map)
-    }
+    // addTreeToMap(tree) {
+    //     const [lng, lat] = tree.geometry.coordinates;
+    //     L.marker([lat, lng]).addTo(this.map)
+    // }
 }
