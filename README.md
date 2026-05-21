@@ -16,7 +16,7 @@ An html class with a prefix of `ff-` represents a custon class. `ff-` classes ar
 - Current iteration is only styled for mobile devices. The app is not yet responsive.
 - The filter tree element dropdown does not have an open or close animation - instance open and close.
 - The small nav menu doesn't close when user clicks outside of it.
-- Used mock/ fake tree geojson data.
+- Uses mock/fake tree geojson data created with AI.
 
 ## Use of mock data
 This prototype uses tree mock data. The mock data matches the same geojson feature structure as found in the original Christchurch City Council tree dataset. Using mock data during development allowed application features such as map rendering, filtering, popup generation.
@@ -73,3 +73,4 @@ This prototype uses tree mock data. The mock data matches the same geojson featu
 **This section discloses where AI has been used in the project and what the prompt was:** 
 - "ff-" naming convention was created with the assistance of ChatGPT using the prompt "Give me some industry-standard ways to seperate bootstrap classes from your own custom classes".
 - The TreeSelectMenu getFormData() method was created with the assistance of ChatGPT using the prompt "what are the best ways to retrieve data from HTML forms using JS?"
+- The mock data this prototype uses was created with ChatGPT using the prompt "Generate geojson with the following requirements - The geojson exists within the following JSON: { "type": "FeatureCollection", "name": "Tree", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ // records go here ] - 100 records inside of the features array that have the following features have the following key pairs and syntax - I have added illegal comments in the GeoJson that explain the values to generate: { "type": "Feature", "properties": { "Ownership": "Private", // make most "Public" and only a few "Private" "AgeClass": "Mature", // make all records "Mature" "CommonName": "Maiden's Gum", // Explained in the instructions, "Height": 18.0, // generate some various heights - randomise between and include 1.0 - 20.0 }, "geometry": { // "type": "Point", // all records are a geometer point "coordinates": [ 172.570298970250491, -43.598559320163552 ] // Use lat and long placed around the Christchurch area } } - all records must use the same datatype as shown in record example. The "CommonName" property must have the following random value: "Apple" "Apricot" "Almond" "Crab Apple" "Chestnut" "Cherry" "European Beech" "Elderberry" "Honey Locust" "Loquat" "Olive" "Peach" "Pear" "Plum" "Quince" "Walnut""
