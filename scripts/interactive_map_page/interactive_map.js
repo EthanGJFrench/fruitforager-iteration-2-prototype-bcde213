@@ -40,16 +40,26 @@ export default class InteractiveMap {
         })
     }
 
-    getGeoJsonPromise() {
-        return (
-            fetch("../../geojson/tree_mock_data.geojson")
-            .then(res => res.json())
-            .catch(error => console.error('Something went wrong - Cannot get tree GeoJSON data'))
-        )
+    async getGeoJsonPromise() {
+        try {
+            const TREEGEOJSON = await fetch("../../geojson/tree_mock_data.geojson");
+            return await TREEGEOJSON.json();
+        } catch (error) {
+            console.error("Something went wrong - Cannot get tree GeoJSON data!");
+        }
     }
 
-    renderTrees() {
-        console.log(this.treeSelectMenu.getFormData())
-        console.log(this.getGeoJsonPromise())
+    async renderTrees() {
+        const TREEFORMDATA = this.treeSelectMenu.getFormData()
+        const TREEDATA = await this.getGeoJsonPromise()
+
+        TREEDATA.features.forEach(tree => {
+            this.addTreeToMap(tree)
+        })
+    }
+
+    addTreeToMap(tree) {
+        const [lng, lat] = tree.geometry.coordinates;
+        L.marker([lat, lng]).addTo(this.map)
     }
 }
