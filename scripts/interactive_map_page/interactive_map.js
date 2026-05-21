@@ -27,9 +27,17 @@ export default class InteractiveMap {
                 minZoom: 10,
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <br> “FruitForager” &copy; 2026 by <a href="https://github.com/EthanGJFrench">Ethan French</a><br> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC BY 4.0</a>.',
             }).addTo(this.map)
+            
         this.treeSelectMenu = new TreeSelectMenu()
-        
-        this.renderTrees()
+
+        this.treeSelectMenu.treeFilterForm.addEventListener("submit", (e) => {
+            e.preventDefault()
+            this.renderTrees()
+            // hide select dropdown when submitted
+            const DROPDOWNBUTTON = document.getElementById("treeFilterDropdownBtn")
+            const DROPDOWN = bootstrap.Dropdown.getOrCreateInstance(DROPDOWNBUTTON)
+            DROPDOWN.hide();
+        })
     }
 
     getGeoJsonPromise() {
@@ -41,6 +49,7 @@ export default class InteractiveMap {
     }
 
     renderTrees() {
+        console.log(this.treeSelectMenu.getFormData())
         console.log(this.getGeoJsonPromise())
     }
 }

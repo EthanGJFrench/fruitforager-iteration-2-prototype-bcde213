@@ -8,8 +8,7 @@
     "features": [
         { 
             "type": "Feature", 
-            "properties": {   
-                "Ownership": "Private", 
+            "properties": {    
                 "AgeClass": "Mature", 
                 "CommonName": "Maiden's Gum", 
                 "Height": 18.0

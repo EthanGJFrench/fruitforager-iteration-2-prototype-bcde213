@@ -22,15 +22,6 @@ export class TreeSelectMenu {
         this.selectAllTrees.addEventListener("change", () => {
             this.toggleSelectAll()
         })
-        this.treeFilterForm.addEventListener("submit", (e) => {
-            // prevent page from refreshing
-            e.preventDefault()
-            this.getFormData()
-            // hide select dropdown when submitted
-            const DROPDOWNBUTTON = document.getElementById("treeFilterDropdownBtn")
-            const DROPDOWN = bootstrap.Dropdown.getOrCreateInstance(DROPDOWNBUTTON)
-            DROPDOWN.hide();
-        })
     }
 
     /**
@@ -50,8 +41,6 @@ export class TreeSelectMenu {
     getFormData() {
         const FORMDATA = new FormData(this.treeFilterForm)
         const SELECTEDFRUIT = FORMDATA.getAll("fruit")
-
-        console.log(SELECTEDFRUIT) // temp
         return SELECTEDFRUIT
     }
 }
