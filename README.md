@@ -4,7 +4,10 @@
 
 ## Coding conventions used.
 ### html class prefixes
-An html class with a prefix of `ff-` represents a custon class. `ff-` classes are placed in the end of the `class` attribute after other classes - such as Bootstrap and Leaflet classes.    
+An html class with a prefix of `ff-` represents a custon class. `ff-` classes are placed in the end of the `class` attribute after other classes - such as Bootstrap and Leaflet classes.
+### Custom errors
+Custom errors created by (programatic, UI etc) all end with a `!`. Example; `console.error("Something went wrong!")`
+
 
 ## Current issues with project
 **This section outlines design and technical aspects of this iteration that are flawed or incomplete and should be addressed in the next iteration**
@@ -17,6 +20,7 @@ An html class with a prefix of `ff-` represents a custon class. `ff-` classes ar
 - The filter tree element dropdown does not have an open or close animation - instance open and close.
 - The small nav menu doesn't close when user clicks outside of it.
 - Uses mock/fake tree geojson data created with AI.
+- Event listeners are applied to elements in many differnt scripts - this should be centralised to the main script.
 
 ## Use of mock data
 This prototype uses tree mock data. The mock data matches the same geojson feature structure as found in the original Christchurch City Council tree dataset. Using mock data during development allowed application features such as map rendering, filtering, popup generation.
