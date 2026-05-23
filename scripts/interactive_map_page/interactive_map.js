@@ -30,11 +30,15 @@ export default class InteractiveMap {
                 this.renderTrees()
         })
 
-        this.treeSelectMenu = new TreeSelectMenu() // tree select menu dom and functionality
-        this.treeSelectMenu.treeFilterForm.addEventListener("change", () => {
+        this.treeSelectMenu = new TreeSelectMenu()
+        this.treeSelectMenu.treeFilterForm.addEventListener("change", () => { // renders tree options when form state changes
               this.renderTrees()
         })
-
+        this.treeSelectMenu.treeFilterForm.addEventListener("reset", () => { // resets the form when
+            setTimeout(() => {
+                this.renderTrees()
+            }, 0)
+        })
         this.treeMarkers = [] // stores the information of markers currently rendered on the map  
 
         this.renderTrees() // render once on instatiation - prevents bugs when refreshing the page with the treeselect options being selected
