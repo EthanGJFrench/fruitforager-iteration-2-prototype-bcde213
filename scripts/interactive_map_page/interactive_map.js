@@ -65,7 +65,42 @@ export default class InteractiveMap {
         }  
     }
 
-    addTreeToMap(tree) {
+    getTreeColor(treeType) {
+        switch (treeType) {
+
+            case "apple":
+                return "red"
+
+            case "apricot":
+                return "orange"
+
+            case "crabapple":
+                return "crimson"
+
+            case "chestnut":
+                return "saddlebrown"
+
+            case "cherry":
+                return "deeppink"
+
+            case "olive":
+                return "olive"
+
+            case "peach":
+                return "blue"
+
+            case "pear":
+                return "yellowgreen"
+
+            case "plum":
+                return "darkviolet"
+
+            default:
+                return "grey"
+        }
+    }
+
+    addTreeToMap(tree, zoom) {
         const [LNG, LAT] = tree.geometry.coordinates; // get tree cordernates
 
         switch (this.normaliseString(tree.properties.CommonName)) {// add markers based on 
@@ -82,15 +117,6 @@ export default class InteractiveMap {
                 const MARKER = L.circleMarker([LAT, LNG], { 
                     radius: 3,
                     color: "orange"
-                }).addTo(this.map)
-                this.treeMarkers.push(MARKER)
-                break
-            }
-
-            case this.normaliseString("almond"): { // if almond
-                const MARKER = L.circleMarker([LAT, LNG], { 
-                    radius: 3,
-                    color: "tan"
                 }).addTo(this.map)
                 this.treeMarkers.push(MARKER)
                 break
@@ -118,42 +144,6 @@ export default class InteractiveMap {
                 const MARKER = L.circleMarker([LAT, LNG], { 
                     radius: 3,
                     color: "deeppink"
-                }).addTo(this.map)
-                this.treeMarkers.push(MARKER)
-                break
-            }
-            
-            case this.normaliseString("europeanbeech"): { // if europeanbeech
-                const MARKER = L.circleMarker([LAT, LNG], { 
-                    radius: 3,
-                    color: "darkgreen"
-                }).addTo(this.map)
-                this.treeMarkers.push(MARKER)
-                break
-            }
-
-            case this.normaliseString("elderberry"): { // if elderberry
-                const MARKER = L.circleMarker([LAT, LNG], { 
-                    radius: 3,
-                    color: "purple"
-                }).addTo(this.map)
-                this.treeMarkers.push(MARKER)
-                break
-            }
-
-            case this.normaliseString("honeylocust"): { // if honeylocust
-                const MARKER = L.circleMarker([LAT, LNG], { 
-                    radius: 3,
-                    color: "gold"
-                }).addTo(this.map)
-                this.treeMarkers.push(MARKER)
-                break
-            }
-            
-            case this.normaliseString("loquat"): { // if loquat
-                const MARKER = L.circleMarker([LAT, LNG], { 
-                    radius: 3,
-                    color: "coral"
                 }).addTo(this.map)
                 this.treeMarkers.push(MARKER)
                 break
@@ -195,28 +185,10 @@ export default class InteractiveMap {
                 break
             }
 
-            case this.normaliseString("quince"): { // if peach
-                const MARKER = L.circleMarker([LAT, LNG], { 
-                    radius: 3,
-                    // color: "lightblue"
-                }).addTo(this.map)
-                this.treeMarkers.push(MARKER)
-                break
-            }
-
-            case this.normaliseString("walnut"): { // if walnut
-                const MARKER = L.circleMarker([LAT, LNG], { 
-                    radius: 3,
-                    color: "brown"
-                }).addTo(this.map)
-                this.treeMarkers.push(MARKER)
-                break
-            }
-
             default: {
                 const MARKER = L.circleMarker([LAT, LNG], {
                     radius: 3,
-                    color: "grey"
+                    color: 'grey'
                 }).addTo(this.map)
                 break
             }

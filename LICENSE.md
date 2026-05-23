@@ -38,6 +38,7 @@ Used for:
 - Providing map tile data and geographic map information used in the interactive map
 
 ### Media Assets
+#### SVG
 **Apple SVG Vector**
 - Name: Apple SVG Vector
 - Source: https://www.svgrepo.com/svg/530203/apple
@@ -62,6 +63,72 @@ Used for:
 Used for:
 - Map icon for link to interactive map from homepage
 
+**Apple SVG Vector**
+- Name: Apple SVG Vector
+- Source: https://www.svgrepo.com/vectors/apple/
+- License: PD License
+- Author: dstore
+Used for:
+- crabapple map icon/ marker for.
+- apple map marker - changed the color from yellow to red.
+
+**Apricot SVG Vector**
+- Name: Apricot SVG Vector
+- Source: www.svgrepo.com/svg/263306/apricot
+- License: CC0 License
+- Uploader: SVG Repo
+Used for:
+- apricot map marker
+
+**Peach SVG Vector**
+- Name: Peach SVG Vector
+- Source: https://www.svgrepo.com/svg/400592/peach
+- License: Apache License
+- Author: Mozilla
+Used for:
+- peach map marker - change color to be more pink
+
+**Chestnut SVG Vector**
+- Name: Chestnut SVG Vector
+- Source: www.svgrepo.com/svg/401282/chestnut
+- License: MIT License
+- Author: joypixels
+Used for:
+- chestnut map marker
+
+**Cherry SVG Vector**
+- Name: Cherry SVG Vector
+- Source: https://www.svgrepo.com/svg/475183/cherry
+- License: PD License
+- Author: Nanda Pratama
+Used for:
+- cherry map marker
+
+**Olive SVG Vector**
+- Name: Olive SVG Vector
+- Source: https://www.svgrepo.com/svg/406788/olive
+- License: MIT License
+- Author: Twitter
+Used for:
+- Olive map marker
+
+**Pear SVG Vector**
+- Name: Pear SVG Vector
+- Source: https://www.svgrepo.com/svg/397725/pear
+- License: Apache License
+- Author: googlefonts
+Used for:
+- Pear map marker
+
+**Pear SVG Vector**
+- Name: Plum SVG Vector
+- Source: https://www.svgrepo.com/svg/475215/plum
+- License: PD License
+- Author: Nanda Pratama
+Used for:
+- Plum map marker
+
+#### Images
 **Image of Riverside Market, Christchurch**
 - Source: https://www.pexels.com/photo/the-riverside-market-in-new-zealand-5363175/
 - Author: Partick Rose
@@ -76,6 +143,7 @@ Used for:
 Used for: 
 - Image in the homepage carousel
 
+#### Video
 **Video of hands holding wild berries in a natiral setting**
 - Source: https://www.pexels.com/video/close-up-of-a-person-holding-a-handful-of-small-fruits-8745407/
 - Author: Roman Odintsov

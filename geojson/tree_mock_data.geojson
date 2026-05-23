@@ -37,19 +37,6 @@
     {
       "type": "Feature",
       "properties": {
-        "Ownership": "Private",
-        "AgeClass": "Mature",
-        "CommonName": "Almond",
-        "Height": 15.2
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6289, -43.5489]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "Ownership": "Public",
         "AgeClass": "Mature",
         "CommonName": "Crab Apple",
@@ -86,59 +73,6 @@
         "coordinates": [172.6612, -43.5448]
       }
     },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Public",
-        "AgeClass": "Mature",
-        "CommonName": "European Beech",
-        "Height": 11.3
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6234, -43.5724]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Public",
-        "AgeClass": "Mature",
-        "CommonName": "Elderberry",
-        "Height": 9.7
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6487, -43.5342]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Public",
-        "AgeClass": "Mature",
-        "CommonName": "Honey Locust",
-        "Height": 16.5
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6712, -43.5487]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Private",
-        "AgeClass": "Mature",
-        "CommonName": "Loquat",
-        "Height": 6.2
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6327, -43.5638]
-      }
-    },
-
     {
       "type": "Feature",
       "properties": {
@@ -189,32 +123,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [172.6385, -43.5672]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Public",
-        "AgeClass": "Mature",
-        "CommonName": "Quince",
-        "Height": 17.2
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6558, -43.5417]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Public",
-        "AgeClass": "Mature",
-        "CommonName": "Walnut",
-        "Height": 10.9
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6264, -43.5581]
       }
     },
     {
@@ -246,19 +154,6 @@
     {
       "type": "Feature",
       "properties": {
-        "Ownership": "Private",
-        "AgeClass": "Mature",
-        "CommonName": "Almond",
-        "Height": 15.2
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6289, -43.5489]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "Ownership": "Public",
         "AgeClass": "Mature",
         "CommonName": "Crab Apple",
@@ -293,58 +188,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [172.6612, -43.5448]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Public",
-        "AgeClass": "Mature",
-        "CommonName": "European Beech",
-        "Height": 11.3
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6234, -43.5724]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Public",
-        "AgeClass": "Mature",
-        "CommonName": "Elderberry",
-        "Height": 9.7
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6487, -43.5342]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Public",
-        "AgeClass": "Mature",
-        "CommonName": "Honey Locust",
-        "Height": 16.5
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6712, -43.5487]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Private",
-        "AgeClass": "Mature",
-        "CommonName": "Loquat",
-        "Height": 6.2
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6327, -43.5638]
       }
     },
     {
@@ -397,32 +240,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [172.6385, -43.5672]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Public",
-        "AgeClass": "Mature",
-        "CommonName": "Quince",
-        "Height": 17.2
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6558, -43.5417]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Ownership": "Public",
-        "AgeClass": "Mature",
-        "CommonName": "Walnut",
-        "Height": 10.9
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [172.6264, -43.5581]
       }
     },
     {
