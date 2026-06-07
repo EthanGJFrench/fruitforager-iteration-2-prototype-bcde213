@@ -146,10 +146,10 @@ export default class InteractiveMap {
         </a>
         `
         if (zoom === 15) {
-            const ICON = L.icon({ // close zoom
+            const ICON = L.icon({
                 iconUrl: MARKER_ICON,
-                iconSize: [18, 18],
-                iconAnchor: [9, 9],
+                iconSize: [24, 24],
+                iconAnchor: [12, 12],
                 className: "ff-tree-marker-icon"
             })
             
@@ -174,8 +174,8 @@ export default class InteractiveMap {
         if (zoom === 16) {
             const ICON = L.icon({ // close zoom
                 iconUrl: MARKER_ICON,
-                iconSize: [28, 28],
-                iconAnchor: [14, 14],
+                iconSize: [36, 36],
+                iconAnchor: [18, 18],
                 className: "ff-tree-marker-icon"
             })
 
@@ -184,7 +184,6 @@ export default class InteractiveMap {
             })
 
             marker.bindPopup(MARKER_POPUP_CONTENT, { // add tree popup information
-                autoClose: false,
                 closeOnClick: false
             })
             marker.on("click", () => {
@@ -200,8 +199,8 @@ export default class InteractiveMap {
         if (zoom === 17) {
             const ICON = L.icon({ // close zoom
                 iconUrl: `./assets/svgs/map_icons/${TREECOMMONNAME}.svg`,
-                iconSize: [32, 32],
-                iconAnchor: [16, 16],
+                iconSize: [44, 44],
+                iconAnchor: [21, 21],
                 className: "ff-tree-marker-icon"
             })
 
