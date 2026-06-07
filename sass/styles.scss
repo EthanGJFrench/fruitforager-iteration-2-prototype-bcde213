@@ -182,7 +182,7 @@ a img {
             circle at top right,
             $secondary,
             transparent 30%
-        );
+        )
 }
 
 .ff-glow-section div.container {
@@ -195,10 +195,9 @@ a img {
     width: 100%;
 }
 
-// Map markers 
+// Map markers
 .ff-tree-marker-icon {
-
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 1rem;
     border-radius: 100%;     
 }

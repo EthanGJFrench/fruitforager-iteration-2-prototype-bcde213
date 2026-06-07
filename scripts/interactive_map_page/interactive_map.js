@@ -44,8 +44,7 @@ export default class InteractiveMap {
         });
 
         this.treeMarkers = [] // stores the information of markers currently rendered on the map  
-
-        this.renderTrees() // render once on instatiation - prevents bugs when refreshing the page with the treeselect options being selected
+        this.renderTrees() // render once on map creation - prevents bugs when refreshing the page with the treeselect options being selected
     }
 
     normaliseString(string) {
@@ -67,11 +66,11 @@ export default class InteractiveMap {
      */
     async getGeoJsonPromise() {
         try {
-            const TREE_GEOJSON = await fetch("./geojson/tree_mock_data.geojson");
-            return await TREE_GEOJSON.json();
+            const TREE_GEOJSON = await fetch("./geojson/tree_mock_data.geojson")
+            return await TREE_GEOJSON.json()
         } 
         catch (error) {
-            console.error("Something went wrong - cannot get tree data!");
+            console.error("Something went wrong - cannot get tree data!")
         }  
     }
 
@@ -127,28 +126,48 @@ export default class InteractiveMap {
             })
         }
 
-        if (zoom == 14) {
+        if (zoom === 14) {
             return L.circleMarker([LAT, LNG], {
                 radius: 2,
                 color: this.getTreeColor(TREECOMMONNAME)
             })
         }
         
+        // Render interactive icon marker when zoomed in
         const MARKER_ICON = `./assets/svgs/map_icons/${TREECOMMONNAME}.svg`
-        if (zoom == 15) {
+        const MARKER_POPUP_CONTENT = 
+        `
+        <h3>${tree.properties.CommonName}</h3>
+        <p>Location: ${LAT}, ${LNG}</p>
+        <a href="https://www.google.com/maps?q=${LAT}, ${LNG}" target="_blank">Take me there!</a>
+        `
+        if (zoom === 15) {
             const ICON = L.icon({ // close zoom
                 iconUrl: MARKER_ICON,
                 iconSize: [18, 18],
                 iconAnchor: [9, 9],
                 className: "ff-tree-marker-icon"
             })
-
-            return L.marker([LAT, LNG], {
+            
+            let marker = L.marker([LAT, LNG], {
                 icon: ICON
             })
+            
+            marker.bindPopup(MARKER_POPUP_CONTENT, { // add tree popup information
+                autoClose: false,
+                closeOnClick: false
+            })
+            marker.on("click", () => {
+                this.map.panTo(marker.getLatLng())
+                setTimeout(() => { // prevent the popup from opening before the map has panned which causes the popup to close
+                    marker.openPopup()
+                }, 100)
+            })
+            
+            return marker
         }
 
-        if (zoom == 16) {
+        if (zoom === 16) {
             const ICON = L.icon({ // close zoom
                 iconUrl: MARKER_ICON,
                 iconSize: [28, 28],
@@ -156,12 +175,25 @@ export default class InteractiveMap {
                 className: "ff-tree-marker-icon"
             })
 
-            return L.marker([LAT, LNG], {
+            let marker = L.marker([LAT, LNG], {
                 icon: ICON
             })
+
+            marker.bindPopup(MARKER_POPUP_CONTENT, { // add tree popup information
+                autoClose: false,
+                closeOnClick: false
+            })
+            marker.on("click", () => {
+                this.map.panTo(marker.getLatLng())
+                setTimeout(() => { // prevent the popup from opening before the map has panned which causes the popup to close
+                    marker.openPopup()
+                }, 100)
+            })
+            
+            return marker
         }
 
-        if (zoom == 17) {
+        if (zoom === 17) {
             const ICON = L.icon({ // close zoom
                 iconUrl: `./assets/svgs/map_icons/${TREECOMMONNAME}.svg`,
                 iconSize: [32, 32],
@@ -169,9 +201,22 @@ export default class InteractiveMap {
                 className: "ff-tree-marker-icon"
             })
 
-            return L.marker([LAT, LNG], {
+            let marker = L.marker([LAT, LNG], {
                 icon: ICON
             })
+
+            marker.bindPopup(MARKER_POPUP_CONTENT, { // add tree popup information
+                autoClose: false,
+                closeOnClick: false
+            })
+            marker.on("click", () => {
+                this.map.panTo(marker.getLatLng())
+                setTimeout(() => { // prevent the popup from opening before the map has panned which causes the popup to close
+                    marker.openPopup()
+                }, 100)
+            })
+
+            return marker
         }
     }
 
@@ -181,15 +226,15 @@ export default class InteractiveMap {
         MARKER.treeData = tree
 
         MARKER.addTo(this.map) // add marker to map
-        this.treeMarkers.push(MARKER) 
+        this.treeMarkers.push(MARKER) // push marker to the list of markers currently rendered on the map
     }
 
     async renderTrees() {
 
         this.treeMarkers.forEach(marker => { // remove old markers before each render
             this.map.removeLayer(marker)
-        })
-        this.treeMarkers = []
+        }) 
+        this.treeMarkers = [] // empty array of currently rendered markers
 
         const TREEFORMDATA = this.treeSelectMenu.getFormData() // get current form data
 
