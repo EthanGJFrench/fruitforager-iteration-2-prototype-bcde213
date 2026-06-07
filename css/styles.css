@@ -158,6 +158,12 @@ a img {
   width: 100%;
 }
 
+.ff-tree-marker-icon {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 100%;
+}
+
 .dropdown-menu {
   overflow-y: auto;
   max-height: 50vh;

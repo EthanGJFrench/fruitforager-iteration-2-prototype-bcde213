@@ -39,7 +39,7 @@ export default class InteractiveMap {
             }, 0)
         })
 
-        this.map.on('zoomend', () => {
+        this.map.on('zoomend', () => { // ts - temp
             console.log('Zoom:', this.map.getZoom());
         });
 
@@ -63,7 +63,7 @@ export default class InteractiveMap {
      * Uses a fetch promise to get the GeoJSON data.
      * Console logs an error if the fetch fails.
      * 
-     * @returns {object, else console.error} retruns GeoJSON object with tree information, else console error if data cannot be fetched.
+     * @return {object: tree GEOJSON, else console.error} retruns GeoJSON object with tree information, else console error if data cannot be fetched.
      */
     async getGeoJsonPromise() {
         try {
@@ -75,6 +75,11 @@ export default class InteractiveMap {
         }  
     }
 
+    /**
+     * Gets the marker color for the corresponding fruit tree type.
+     * 
+     * @return {string: marker color, defaults to grey if no tree is found}  
+     */
     getTreeColor(treeType) {
         switch (treeType) {
 
@@ -101,7 +106,7 @@ export default class InteractiveMap {
 
             case "pear":
                 return "yellowgreen"
-
+ 
             case "plum":
                 return "darkviolet"
 
@@ -111,12 +116,11 @@ export default class InteractiveMap {
     }
 
     renderTreeMarker(tree, zoom) {
-
         const [LNG, LAT] = tree.geometry.coordinates 
         const TREECOMMONNAME = this.normaliseString(tree.properties.CommonName)
 
         // conditionally render markers based on map zoom
-        if (zoom >= 12 && zoom <= 13) {
+        if (zoom <= 13) {
             return L.circleMarker([LAT, LNG], {
                 radius: 1,
                 color: this.getTreeColor(TREECOMMONNAME)
@@ -130,23 +134,13 @@ export default class InteractiveMap {
             })
         }
         
+        const MARKER_ICON = `./assets/svgs/map_icons/${TREECOMMONNAME}.svg`
         if (zoom == 15) {
             const ICON = L.icon({ // close zoom
-                iconUrl: `./assets/svgs/map_icons/${TREECOMMONNAME}.svg`,
+                iconUrl: MARKER_ICON,
                 iconSize: [18, 18],
-                iconAnchor: [9, 9]
-            })
-
-            return L.marker([LAT, LNG], {
-                icon: ICON
-            })
-        }
-
-        if (zoom == 15) {
-            const ICON = L.icon({ // close zoom
-                iconUrl: `./assets/svgs/map_icons/${TREECOMMONNAME}.svg`,
-                iconSize: [22, 22],
-                iconAnchor: [11, 11]
+                iconAnchor: [9, 9],
+                className: "ff-tree-marker-icon"
             })
 
             return L.marker([LAT, LNG], {
@@ -156,9 +150,10 @@ export default class InteractiveMap {
 
         if (zoom == 16) {
             const ICON = L.icon({ // close zoom
-                iconUrl: `./assets/svgs/map_icons/${TREECOMMONNAME}.svg`,
+                iconUrl: MARKER_ICON,
                 iconSize: [28, 28],
-                iconAnchor: [14, 14]
+                iconAnchor: [14, 14],
+                className: "ff-tree-marker-icon"
             })
 
             return L.marker([LAT, LNG], {
@@ -170,7 +165,8 @@ export default class InteractiveMap {
             const ICON = L.icon({ // close zoom
                 iconUrl: `./assets/svgs/map_icons/${TREECOMMONNAME}.svg`,
                 iconSize: [32, 32],
-                iconAnchor: [16, 16]
+                iconAnchor: [16, 16],
+                className: "ff-tree-marker-icon"
             })
 
             return L.marker([LAT, LNG], {
