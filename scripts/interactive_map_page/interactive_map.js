@@ -139,7 +139,11 @@ export default class InteractiveMap {
         `
         <h3>${tree.properties.CommonName}</h3>
         <p>Location: ${LAT}, ${LNG}</p>
-        <a href="https://www.google.com/maps?q=${LAT}, ${LNG}" target="_blank">Take me there!</a>
+        <p>Tree age: ${tree.properties.AgeClass}</p>
+        <p>Tree height: ${tree.properties.Height}M</p>
+        <a href="https://www.google.com/maps?q=${LAT}, ${LNG}" target="_blank">
+            <button class="btn btn-primary bg-gradient">Take me there!</button>
+        </a>
         `
         if (zoom === 15) {
             const ICON = L.icon({ // close zoom
